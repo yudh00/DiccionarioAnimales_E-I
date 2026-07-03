@@ -1,0 +1,158 @@
+:root {
+    --verde-oscuro: #22424d;
+    --verde-medio: #239b87;
+    --verde-claro: #e8f5f3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f4f9f4 0%, #e6f2f0 100%);
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Bloque bilingüe: dos columnas */
+.hero-bilingue {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0;
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+
+.hero-es,
+.hero-en {
+    padding: 36px 32px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.hero-es {
+    border-left: 5px solid var(--verde-medio);
+}
+
+.hero-en {
+    border-left: 5px solid #4a6fa5;
+}
+
+.hero-idioma-badge {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--verde-oscuro);
+    opacity: 0.7;
+}
+
+.hero-es h1,
+.hero-en h1 {
+    color: var(--verde-oscuro);
+    font-size: 1.55rem;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.hero-es p,
+.hero-en p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+/* Línea divisoria vertical */
+.hero-divisor {
+    width: 1px;
+    background-color: #e2e8f0;
+    margin: 24px 0;
+}
+
+/* Contenedor del mapa */
+.mapa-contenedor {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto 28px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 36px rgba(0,0,0,0.07);
+    animation: flotar 4s ease-in-out infinite;
+}
+
+.mapa-imagen {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Botón de entrada */
+.btn-entrar {
+    display: inline-block;
+    padding: 16px 42px;
+    background-color: var(--verde-oscuro);
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0 5px 20px rgba(34, 66, 77, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 0.3px;
+}
+
+.btn-entrar:hover {
+    background-color: #1a333c;
+    transform: translateY(-2px);
+}
+
+/* Animación flotante del mapa */
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+}
+
+/* Responsive: apilar columnas en pantallas pequeñas */
+@media (max-width: 640px) {
+    .hero-bilingue {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-divisor {
+        width: auto;
+        height: 1px;
+        margin: 0 24px;
+    }
+
+    .hero-es {
+        border-left: 5px solid var(--verde-medio);
+        border-bottom: none;
+    }
+
+    .hero-en {
+        border-left: 5px solid #4a6fa5;
+    }
+}

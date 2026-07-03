@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario de Biodiversidad - Fauna de Costa Rica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fauna de Costa Rica</h1>
+        <p class="subtitulo">Diccionario Español - Inglés</p>
+    </header>
+
+    <main>
+
+        <div class="instrucciones-bilingue">
+            <div class="instruccion-es">
+                <h3>🇨🇷 ¿Cómo usar el diccionario?</h3>
+                <p>Cada tarjeta muestra el animal <strong>en español</strong> por defecto.
+                Haz clic en el ícono <strong>⇄</strong> para voltear la tarjeta y ver el nombre,
+                descripción y pronunciación <strong>en inglés</strong>.
+                Presiona el botón <strong>🔊</strong> para escuchar el nombre del animal en voz alta.</p>
+            </div>
+            <div class="instruccion-en">
+                <h3>🇬🇧 How to use the dictionary?</h3>
+                <p>Each card displays the animal <strong>in Spanish</strong> by default.
+                Click the <strong>⇄</strong> icon to flip the card and see the name,
+                description, and pronunciation <strong>in English</strong>.
+                Press the <strong>🔊</strong> button to hear the animal's name read aloud.</p>
+            </div>
+        </div>
+
+        <div class="buscador-contenedor">
+            <input type="text" id="buscador" placeholder="Buscar / Search">
+        </div>
+
+        <div class="filtros-contenedor">
+            <button class="btn-filtro activo" data-categoria="Todos">Todos / All</button>
+            <button class="btn-filtro" data-categoria="Mamíferos">Mamíferos / Mammals</button>
+            <button class="btn-filtro" data-categoria="Aves">Aves / Birds</button>
+            <button class="btn-filtro" data-categoria="Reptiles">Reptiles / Reptiles</button>
+            <button class="btn-filtro" data-categoria="Anfibios">Anfibios / Amphibians</button>
+        </div>
+
+        <section id="galeria-animales" class="galeria-grid">
+        </section>
+
+    </main>
+
+    <script src="animals.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
